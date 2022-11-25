@@ -12,12 +12,6 @@ pipeline {
                 sh "./Limited_Subtraction.py"
             }
         }
-        stage('Test Code Passed') {
-            steps {
-                sh "chmod u+x Unit_test1.py"
-                sh "./Unit_test1.py"
-            }
-        }
         stage('Test Code Failed') {
             steps {
                 sh "chmod u+x Unit_test2.py"
